@@ -1,0 +1,32 @@
+name: mathlib
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          python3 -m pip install pip --upgrade
+          pip install fandogh-cli --upgrade
+      - name: Login to PaaS
+        run: |
+          fandogh login --username=$CLOUD_USER --password=$CLOUD_PASS
+        env:
+          COLLECT_ERROR: "TRUE"
+          CLOUD_USER: ${{ secrets.CLOUD_USER }}
+          CLOUD_PASS: ${{ secrets.CLOUD_PASS }}
+      - name: Publish image
+        run: |
+          fandogh image publish --version=$GITHUB_SHA
+      - name: Deploy service
+        run: |
+          fandogh service apply -f .fandogh/mathlib.yml -p VERSION=$GITHUB_SHA

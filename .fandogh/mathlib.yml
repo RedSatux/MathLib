@@ -1,0 +1,17 @@
+kind: ExternalService
+name: mathlib
+spec:
+  image: mathlib:${VERSION}
+  allow_http: false
+  replicas: 1
+  port: 80
+
+  domains:
+    - name: math-lib.ir
+
+  resources:
+    memory: 200Mi
+
+  env:
+    - name: VERSION
+      value: ${VERSION}

@@ -1,0 +1,22 @@
+{
+  "short_name": "کتابخانه ریاضیات",
+  "name": "کتابخانه ریاضیات",
+  "icons": [
+    {
+      "src": "/192.png",
+      "type": "image/png",
+      "sizes": "192×192"
+    },
+    {
+      "src": "/512.png",
+      "type": "image/png",
+      "sizes": "512×512"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0e151d",
+  "orientation": "portrait",
+  "background_color": "#0e151d"
+}
