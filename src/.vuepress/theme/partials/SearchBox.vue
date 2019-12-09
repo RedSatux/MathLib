@@ -197,6 +197,7 @@
                 right 0
 
         .suggestion
+            width 20rem
             line-height 1.4
             padding 0.4rem 0.6rem
             border-radius 4px
@@ -254,6 +255,9 @@
     @media (max-width: $MQMobileNarrow)
         .search-box
             .suggestions
+                width calc(100vw - 4rem)
+
+            .suggestion
                 width calc(100vw - 4rem)
 
             input:focus
