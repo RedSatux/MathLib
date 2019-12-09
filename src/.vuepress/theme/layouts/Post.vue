@@ -59,7 +59,7 @@
         },
         mounted() {
             window.gc_params = {
-                graphcomment_id: 'mathlib',
+                graphcomment_id: 'math-lib',
                 graphcomment_amp: true,
                 fixed_header_height: 0,
             };

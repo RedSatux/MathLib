@@ -16,6 +16,7 @@ module.exports = {
         }
     },
     plugins: [
+        'latex',
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: {
@@ -41,7 +42,14 @@ module.exports = {
         }, {
             text: 'کتابخانه',
             link: '/category/کتابخانه'
+        }, {
+            text: 'درباره',
+            link: '/about.html'
         }],
+        searchMaxSuggestions: 5,
+        searchHotKeys: ['s', '/'],
+        searchNoResults: 'نتیجه ای یافت نشد...',
+        searchPlaceholder: 'جستجو در مطالب...',
         social: {
             instagram: 'https://instagram.com/RedSatux',
             email: 'mailto:redsatux@gmail.com',

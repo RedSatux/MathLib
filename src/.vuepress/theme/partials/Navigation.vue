@@ -11,6 +11,9 @@
                 <li v-for="(item, index) in nav" role="menuitem" :key="index">
                     <router-link :class="{ active: item.active }" :to="item.link">{{ item.text }}</router-link>
                 </li>
+                <li>
+                    <search-box></search-box>
+                </li>
             </ul>
         </div>
         <div class="site-nav-right">
@@ -24,10 +27,11 @@
 
 <script>
     import {mapGetters} from 'vuex'
+    import SearchBox from './SearchBox'
     import SocialLink from './SocialLink'
 
     export default {
-        components: {SocialLink},
+        components: {SearchBox, SocialLink},
         computed: {
             ...mapGetters(['blog', 'type', 'social', 'nav']),
             isHome() {
@@ -84,15 +88,16 @@
     }
 
     .nav {
-        display: flex;
-        margin: 0 0 0 -12px;
-        padding-right: 5px;
+        display:table;
         list-style: none;
+        padding-right: 5px;
+        margin: 0 0 0 -12px;
 
         li {
-            display: block;
             margin: 0;
             padding: 0;
+            display: table-cell;
+            vertical-align:middle;
             text-transform: uppercase;
 
             a {
