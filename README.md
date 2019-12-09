@@ -2,8 +2,8 @@
 
 
 ### TODO
-- Forum
-- Search box
-- Back button
-- User System
-- Comment system
+- [ ] Forum
+- [x] Search box
+- [ ] Back button
+- [ ] User System
+- [ ] Comment system
