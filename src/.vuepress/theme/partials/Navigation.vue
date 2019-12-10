@@ -59,7 +59,6 @@
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         margin-right: 10px;
-        padding-bottom: 275px;
         letter-spacing: 0.4px;
         white-space: nowrap;
     }

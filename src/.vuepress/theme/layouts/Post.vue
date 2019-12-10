@@ -7,7 +7,7 @@
                         <time class="post-full-meta-date" :datetime="datetime">{{ localeDate }}</time>
                         <span class="date-divider" v-if="primaryTag">/</span>
                         <router-link v-if="primaryTag" class="tag" :to="this.$withBase(`/tags/${primaryTag}`)">
-                            {{ primaryTag }}
+                           {{ this.current.tags.join(', ') }}
                         </router-link>
                     </section>
                     <h1 class="post-full-title">{{ current.title }}</h1>

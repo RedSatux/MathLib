@@ -1,6 +1,6 @@
 <template>
     <div class="site-wrapper">
-        <site-header :blog="this.blog" :header="header">
+        <site-header :header="header">
             <nav class="site-nav-center">
                 <a :href="this.blog.base" class="site-nav-logo">
                     <img v-if="this.blog.logo" class="site-logo" :src="this.blog.logo" :alt="this.blog.title"/>

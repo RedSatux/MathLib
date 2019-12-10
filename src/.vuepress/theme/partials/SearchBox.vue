@@ -154,112 +154,145 @@
     }
 </script>
 
-<style lang="stylus">
-    .search-box
-        margin auto
-        margin-right 10px
-        text-align center
-        position relative
-        display inline-block
+<style lang="scss">
+    .search-box {
+        margin: auto;
+        margin-right: 10px;
+        text-align: center;
+        position: absolute;
+        display: inline-block;
 
-        input
-            cursor text
-            width 15rem
-            height: 2.2rem
-            color lighten($textColor, 25%)
-            display inline-block
-            border 1px solid darken(#010101, 10%)
-            border-radius 2rem
-            font-size 1.15rem
-            line-height 2rem
-            padding 0 0.5rem 0 2rem
-            outline none
-            transition all .2s ease
-            background #fff url(/search.svg) 0.6rem 0.5rem no-repeat
-            background-size 1rem
+        input {
+            top: 50%;
+            cursor: text;
+            width: 15rem;
+            outline: none;
+            height: 2.2rem;
+            line-height: 2rem;
+            font-size: 1.15rem;
+            position: relative;
+            border-radius: 2rem;
+            background-size: 1rem;
+            display: inline-block;
+            padding: 0 0.5rem 0 2rem;
+            transition: all 0.2s ease;
+            transform: translateY(-50%);
+            color: #4e6e8e;
+            border: 1px solid #010101;
+            background: #fff url(/search.svg) 0.6rem 0.5rem no-repeat;
 
-            &:focus
-                cursor auto
-                border-color $accentColor
+            &:focus {
+                cursor: auto;
+                border-color: #3eaf7c;
+            }
+        }
 
-        .suggestions
-            z-index 10
-            background #fff
-            width 20rem
-            position absolute
-            top 1.5rem
-            border-radius 6px
-            padding 0.4rem
-            margin-top 10px
-            list-style-type none
+        .suggestions {
+            z-index: 10;
+            background: #fff;
+            width: 20rem;
+            position: absolute;
+            top: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #eaecef;
+            padding: 0.4rem;
+            margin-top: 10px;
+            list-style-type: none;
 
-            &.align-right
-                right 0
+            li {
+                display: block;
+                width: 100%;
+            }
+        }
 
-        .suggestion
-            width 20rem
-            line-height 1.4
-            padding 0.4rem 0.6rem
-            border-radius 4px
-            cursor pointer
+        .suggestions.align-right {
+            right: 0;
+        }
 
-            a
-                white-space normal
-                color lighten($accentColor, 25%)
+        .suggestion {
+            width: 20rem;
+            line-height: 1.4;
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
 
-                .page-title
-                    font-weight 600
+            a {
+                white-space: normal;
+                color: #68c99d;
 
-                .header
-                    font-size 0.9rem
-                    margin-left 0.25em
+                .page-title {
+                    font-weight: 600;
+                }
 
-            &.focused
-                background-color #f3f4f5
+                .header {
+                    font-size: 0.9rem;
+                    margin-left: 0.25em;
+                }
+            }
+        }
 
-                a
-                    color $accentColor
+        .suggestion.focused {
+            background-color: #f3f4f5;
 
-    @media (max-width: $MQNarrow)
-        .search-box
-            input
-                cursor pointer
-                width 0
-                background transparent url(/search.svg) 0.6rem 0.5rem no-repeat
-                border-color transparent
-                position relative
+            a {
+                color: #3eaf7c;
+            }
+        }
+    }
 
-                &:focus
-                    cursor text
-                    left 0
-                    background #fff url(/search.svg) 0.6rem 0.5rem no-repeat
-                    width 12rem
+    @media (max-width: 959px) {
+        .search-box {
+            input {
+                cursor: pointer;
+                width: 0;
+                background: transparent url(/search.svg) 0.6rem 0.5rem no-repeat;
+                border-color: transparent;
+                position: relative;
 
-    @media all and (-ms-high-contrast: none)
-        .search-box input
-            height 2rem
+                &:focus {
+                    cursor: text;
+                    left: 0;
+                    background: #f9f9f9 url(/search.svg) 0.6rem 0.5rem no-repeat;
+                    width: 12rem;
+                }
+            }
+        }
+    }
 
-    @media (max-width: $MQNarrow) and (min-width: $MQMobile)
-        .search-box
-            .suggestions
-                left 0
+    @media all and (-ms-high-contrast: none) {
+        .search-box {
+            input {
+                height: 2rem;
+            }
+        }
+    }
 
-    @media (max-width: $MQMobile)
-        .search-box
-            input
-                left 1rem
+    @media (max-width: 959px) and (min-width: 719px) {
+        .search-box {
+            .suggestions {
+                left: 0;
+            }
+        }
+    }
 
-            .suggestions
-                right 0
+    @media (max-width: 719px) {
+        .search-box {
+            input {
+                left: 1rem;
 
-    @media (max-width: $MQMobileNarrow)
-        .search-box
-            .suggestions
-                width calc(100vw - 4rem)
+                &:focus {
+                    width: 10rem;
+                }
+            }
 
-            .suggestion
-                width calc(100vw - 4rem)
+            .suggestions {
+                right: 0;
+                width: calc(100vw - 4rem);
+            }
 
-            input:focus
-                width 10rem
+            .suggestion {
+                width: calc(100vw - 4rem);
+            }
+        }
+    }
 </style>
