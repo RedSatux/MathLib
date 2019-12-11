@@ -85,14 +85,12 @@
                         }
                     }
                 }
-                console.log(res);
                 if (res.length <= 0) {
                     res.push({
                         path: '#',
                         title: this.$site.themeConfig.searchNoResults
                     })
                 }
-                console.log(res);
                 return res
             },
             alignRight() {
