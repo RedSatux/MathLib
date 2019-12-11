@@ -111,6 +111,8 @@
 
     .post-card-excerpt {
         font-family: YekanBakh, serif;
+        -webkit-text-stroke:1px transparent;
+        -webkit-font-smoothing: subpixel-antialiased;
     }
 
     .post-card-meta {

@@ -425,6 +425,8 @@
         border: 0;
         color: $blue;
         font-family: YekanBakh, serif;
+        -webkit-text-stroke:1px transparent;
+        -webkit-font-smoothing: subpixel-antialiased;
         font-size: 3.2rem;
         line-height: 1.35em;
         text-align: center;

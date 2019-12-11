@@ -12,6 +12,8 @@ body {
   overflow-x: hidden;
   color: darken($midgrey, 25%);
   font-family: YekanBakh, sans-serif;
+  -webkit-text-stroke:1px transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
   direction: rtl;
   font-size: 1.5rem;
   line-height: 1.6em;
