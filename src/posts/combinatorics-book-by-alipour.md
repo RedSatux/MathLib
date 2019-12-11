@@ -9,6 +9,7 @@ tags:
   - کتاب
 categories:
   - المپیاد
+  - کتابخانه
 readingTime: ۲ دقیقه
 meta:
   - name: keywords
