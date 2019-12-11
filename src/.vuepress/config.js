@@ -37,11 +37,6 @@ module.exports = {
             before: (message) => `<div class="custom-block details"><p class="title">${message}</p>`,
             after: '</div>',
         }],
-        ['vuepress-plugin-container', {
-            type: 'button',
-            before: (message) => `<div class="custom-block details"><p class="title">${message}</p>`,
-            after: '</div>',
-        }],
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: {
