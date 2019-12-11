@@ -7,7 +7,7 @@
                         <time class="post-full-meta-date" :datetime="datetime">{{ localeDate }}</time>
                         <span class="date-divider" v-if="primaryTag">/</span>
                         <router-link v-if="primaryTag" class="tag" :to="this.$withBase(`/tags/${primaryTag}`)">
-                           {{ this.current.tags.join(', ') }}
+                            {{ this.current.tags.join(', ') }}
                         </router-link>
                     </section>
                     <h1 class="post-full-title">{{ current.title }}</h1>
@@ -291,7 +291,7 @@
     .post-full-content blockquote {
         margin: 0 0 1.5em;
         padding: 0 1.5em;
-        border-left: #3eb0ef 3px solid;
+        border-right: #3eb0ef 3px solid;
     }
 
     .post-full-content blockquote p {
@@ -613,5 +613,76 @@
         .post-full-content .kg-width-full .kg-image {
             width: 100vw;
         }
+    }
+
+    .custom-block {
+        width: 100%;
+
+        .title {
+            font-weight: 600;
+            margin-bottom: -0.4rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .tip {
+        padding-top: 1rem;
+        padding-right: 1.25rem;
+        border-right-width: 0.5rem;
+        border-right-style: solid;
+        margin: 1rem 0;
+        background-color: #f3f5f7;
+        border-color: #42b983;
+    }
+
+    .danger {
+        padding-top: 1rem;
+        padding-right: 1.25rem;
+        border-right-width: 0.5rem;
+        border-right-style: solid;
+        margin: 1rem 0;
+        background-color: #ffe6e6;
+        border-color: #c00;
+        color: #4d0000;
+
+        .title {
+            color: #900;
+        }
+
+        a {
+            color: #2c3e50;
+        }
+    }
+
+    .warning {
+        padding-top: 1rem;
+        padding-right: 1.25rem;
+        border-right-width: 0.5rem;
+        border-right-style: solid;
+        margin: 1rem 0;
+        background-color: rgba(255, 229, 100, 0.3);
+        border-color: #e7c000;
+        color: #6b5900;
+
+        .title {
+            color: #b29400;
+        }
+
+        a {
+            color: #2c3e50;
+        }
+    }
+
+    .details {
+        padding-top: 1rem;
+        padding-right: 1.25rem;
+        border-right-width: 0.5rem;
+        border-right-style: solid;
+        margin: 1rem 0;
+        background-color: #eee;
+        border-color: #a3a3a3;
     }
 </style>

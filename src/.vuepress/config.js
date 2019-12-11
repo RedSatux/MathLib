@@ -17,6 +17,31 @@ module.exports = {
     },
     plugins: [
         'latex',
+        ['vuepress-plugin-container', {
+            type: 'tip',
+            before: (message) => `<div class="custom-block tip"><p class="title">${message}</p>`,
+            after: '</div>',
+        }],
+        ['vuepress-plugin-container', {
+            type: 'danger',
+            before: (message) => `<div class="custom-block danger"><p class="title">${message}</p>`,
+            after: '</div>',
+        }],
+        ['vuepress-plugin-container', {
+            type: 'warning',
+            before: (message) => `<div class="custom-block warning"><p class="title">${message}</p>`,
+            after: '</div>',
+        }],
+        ['vuepress-plugin-container', {
+            type: 'details',
+            before: (message) => `<div class="custom-block details"><p class="title">${message}</p>`,
+            after: '</div>',
+        }],
+        ['vuepress-plugin-container', {
+            type: 'button',
+            before: (message) => `<div class="custom-block details"><p class="title">${message}</p>`,
+            after: '</div>',
+        }],
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: {
