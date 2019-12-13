@@ -113,21 +113,21 @@
     .button-info {
         &::before {
             color: white !important;
-            background: linear-gradient(135deg, #ABDCFF, #0396FF);
+            background: linear-gradient(135deg, #8ec7ff, #0396FF);
         }
     }
 
     .button-success {
         &::before {
             color: white !important;
-            background: linear-gradient(135deg, #37f4d2 , #17e6a2);
+            background: linear-gradient(135deg, #00fe83, #00b499);
         }
     }
 
     .button-danger {
         &::before {
             color: white !important;
-            background: linear-gradient(135deg, #FEB692, #EA5455);
+            background: linear-gradient(135deg, #fea175, #EA5455);
         }
     }
 
@@ -137,4 +137,12 @@
             background: linear-gradient(135deg, #FFE985, #FA742B);
         }
     }
+
+    .button-download {
+        &::before {
+            color: white !important;
+            background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+        }
+    }
+
 </style>
