@@ -147,7 +147,7 @@
         opacity: 1;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 825px) {
         .site-header {
             padding-right: 0;
             padding-left: 0;
