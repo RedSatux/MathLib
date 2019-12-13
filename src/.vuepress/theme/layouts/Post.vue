@@ -261,7 +261,8 @@
     .post-full-content video {
         display: block;
         margin: 1.5em auto;
-        max-width: 1040px;
+        border-radius: 15px;
+        max-width: 850px !important;
     }
 
     @media (max-width: 1040px) {
@@ -425,7 +426,7 @@
         border: 0;
         color: $blue;
         font-family: YekanBakh, serif;
-        -webkit-text-stroke:1px transparent;
+        -webkit-text-stroke: 1px transparent;
         -webkit-font-smoothing: subpixel-antialiased;
         font-size: 3.2rem;
         line-height: 1.35em;
@@ -615,76 +616,5 @@
         .post-full-content .kg-width-full .kg-image {
             width: 100vw;
         }
-    }
-
-    .custom-block {
-        width: 100%;
-
-        .title {
-            font-weight: 600;
-            margin-bottom: -0.4rem;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-        }
-    }
-
-    .tip {
-        padding-top: 1rem;
-        padding-right: 1.25rem;
-        border-right-width: 0.5rem;
-        border-right-style: solid;
-        margin: 1rem 0;
-        background-color: #f3f5f7;
-        border-color: #42b983;
-    }
-
-    .danger {
-        padding-top: 1rem;
-        padding-right: 1.25rem;
-        border-right-width: 0.5rem;
-        border-right-style: solid;
-        margin: 1rem 0;
-        background-color: #ffe6e6;
-        border-color: #c00;
-        color: #4d0000;
-
-        .title {
-            color: #900;
-        }
-
-        a {
-            color: #2c3e50;
-        }
-    }
-
-    .warning {
-        padding-top: 1rem;
-        padding-right: 1.25rem;
-        border-right-width: 0.5rem;
-        border-right-style: solid;
-        margin: 1rem 0;
-        background-color: rgba(255, 229, 100, 0.3);
-        border-color: #e7c000;
-        color: #6b5900;
-
-        .title {
-            color: #b29400;
-        }
-
-        a {
-            color: #2c3e50;
-        }
-    }
-
-    .details {
-        padding-top: 1rem;
-        padding-right: 1.25rem;
-        border-right-width: 0.5rem;
-        border-right-style: solid;
-        margin: 1rem 0;
-        background-color: #eee;
-        border-color: #a3a3a3;
     }
 </style>

@@ -241,7 +241,8 @@
     .post-full-content video {
         display: block;
         margin: 1.5em auto;
-        max-width: 1040px;
+        border-radius: 15px;
+        max-width: 850px !important;
     }
 
     @media (max-width: 1040px) {
