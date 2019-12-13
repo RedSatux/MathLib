@@ -62,6 +62,9 @@
             this.updatePage(this.$page);
             this.updateSite(this.$site);
             this.updateParams(this.$route.params);
+            if (['posts', 'tags', 'category'].indexOf(this.type) > 0) {
+                document.title = this.$title;
+            }
         }
     }
 </script>
