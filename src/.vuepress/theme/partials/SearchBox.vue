@@ -136,11 +136,11 @@
                     return
                 }
                 let path = this.suggestions[i].path;
-                if (path && path !== this.$router.currentRoute.path) {
+                if (path && path !== this.$router.currentRoute.path && path !== '#') {
                     this.$router.push(path);
-                    this.query = '';
-                    this.focusIndex = 0
                 }
+                this.query = '';
+                this.focusIndex = 0;
             },
             focus(i) {
                 this.focusIndex = i

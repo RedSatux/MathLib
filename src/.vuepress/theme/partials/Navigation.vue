@@ -1,7 +1,7 @@
 <template>
     <nav class="site-nav">
         <div class="site-nav-left">
-            <router-link v-if="!isHome && this.blog.logo" class="site-nav-logo" to="/">
+            <router-link v-if="isPage && this.blog.logo" class="site-nav-logo" to="/">
                 <img :src="this.$withBase(this.blog.logo)" :alt="this.blog.title"/>
             </router-link>
             <router-link v-if="!isHome && !this.blog.logo" class="site-nav-logo" to="/">
@@ -36,6 +36,9 @@
             ...mapGetters(['blog', 'type', 'social', 'nav']),
             isHome() {
                 return this.type === 'home'
+            },
+            isPage() {
+                return this.type === 'page'
             }
         }
     }

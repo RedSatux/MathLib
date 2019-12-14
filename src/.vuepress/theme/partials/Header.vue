@@ -4,9 +4,9 @@
             <div class="site-header-content" v-if="header.showCover">
                 <h1 class="site-title">
                     <img v-if="header.logo" class="site-logo" :src="this.$withBase(header.logo)" :alt="header.title"/>
-                    <span v-else>{{ header.title }}</span>
                 </h1>
-                <h2 class="site-description" v-if="header.description">{{ header.description }}</h2>
+                <h2 class="site-description" v-if="isHome">{{ header.description }}</h2>
+                <h2 class="site-description" v-else-if="header.title && !isHome"><b>{{ header.title }}</b> - {{ header.description }}</h2>
             </div>
             <slot></slot>
         </div>
@@ -14,8 +14,11 @@
 </template>
 <script>
     export default {
-        props: ['header'],
+        props: ['type', 'blog', 'header'],
         computed: {
+            isHome() {
+                return this.type === 'home'
+            },
             backgroundStyle() {
                 if (this.header.coverImage) {
                     return {

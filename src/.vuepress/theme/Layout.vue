@@ -1,6 +1,6 @@
 <template>
     <div class="site-wrapper">
-        <site-header :header="header">
+        <site-header :type="type" :blog="blog" :header="header">
             <navigation/>
         </site-header>
         <component :is="content"></component>

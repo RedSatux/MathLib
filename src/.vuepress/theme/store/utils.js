@@ -100,6 +100,7 @@ export const header = state => {
         case 'category':
             return {
                 showCover: true,
+                logo: state.blog.logo,
                 coverImage: state.blog.cover,
                 title: category(state) ? `دسته بندی ${category(state)}` : null,
                 description: `${state.posts.length} نتیجه`
@@ -108,6 +109,7 @@ export const header = state => {
         case 'tags':
             return {
                 showCover: true,
+                logo: state.blog.logo,
                 coverImage: state.blog.cover,
                 title: tag(state) ? `برچسب ${tag(state)}` : null,
                 description: `${state.posts.length} نتیجه`
@@ -116,6 +118,7 @@ export const header = state => {
         case 'posts':
             return {
                 showCover: true,
+                logo: state.blog.logo,
                 coverImage: state.blog.cover,
                 title: `پست ها`,
                 description: `${state.posts.length} نتیجه`
@@ -133,6 +136,7 @@ export const header = state => {
         default:
             return {
                 showCover: false,
+                logo: state.blog.logo,
                 coverImage: state.blog.cover,
                 title: null,
                 description: null
