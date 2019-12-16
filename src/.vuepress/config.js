@@ -17,26 +17,6 @@ module.exports = {
     },
     plugins: [
         'latex',
-        ['vuepress-plugin-container', {
-            type: 'tip',
-            before: (message) => `<div class="custom-block tip"><p class="title">${message}</p>`,
-            after: '</div>',
-        }],
-        ['vuepress-plugin-container', {
-            type: 'danger',
-            before: (message) => `<div class="custom-block danger"><p class="title">${message}</p>`,
-            after: '</div>',
-        }],
-        ['vuepress-plugin-container', {
-            type: 'warning',
-            before: (message) => `<div class="custom-block warning"><p class="title">${message}</p>`,
-            after: '</div>',
-        }],
-        ['vuepress-plugin-container', {
-            type: 'details',
-            before: (message) => `<div class="custom-block details"><p class="title">${message}</p>`,
-            after: '</div>',
-        }],
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: {
@@ -69,7 +49,7 @@ module.exports = {
         searchMaxSuggestions: 5,
         searchHotKeys: ['s', '/'],
         searchNoResults: 'نتیجه ای یافت نشد...',
-        searchPlaceholder: 'جستجو در مطالب...',
+        searchPlaceholder: 'جستجو در وبلاگ...',
         social: {
             instagram: 'https://instagram.com/RedSatux',
             email: 'mailto:redsatux@gmail.com',
