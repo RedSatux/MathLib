@@ -4,16 +4,17 @@
                 v-if="enabled"
                 class="sw-update-popup">
             {{ message }}<br>
-            <button @click="reload">{{ buttonText }}</button>
+            <Button :text="buttonText" theme="success" @click="reload"></Button>
         </div>
     </SWUpdatePopup>
 </template>
 
 <script>
+    import Button from './Button'
     import SWUpdatePopup from '@vuepress/plugin-pwa/lib/SWUpdatePopup.vue'
 
     export default {
-        components: {SWUpdatePopup}
+        components: {Button, SWUpdatePopup}
     }
 </script>
 
@@ -24,14 +25,10 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: #fff;
         font-size: 20px;
         padding: 10px;
+        background-color: #f5f5f5;
         border: 15px solid transparent;
-        box-shadow: 0 0.5px 0 0 #fff inset, 0 1px 2px 0 #B3B3B3;
-    }
-
-    .sw-update-popup button {
-        border: 1px solid #fefefe;
+        box-shadow: 0 0.5px 0 0 #f4f4f4 inset, 0 1px 2px 0 #d2d2d2;
     }
 </style>
