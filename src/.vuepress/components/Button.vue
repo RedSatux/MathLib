@@ -12,13 +12,15 @@
         ],
         methods: {
             clicked() {
-                const isFile = path => /\/files\w*/.test(path);
-                const isExternal = path => /^https?:\/\//i.test(path);
-                if (isExternal(this.path) || isFile(this.path)) {
-                    window.location = this.path;
-                    window.location = this.path;
-                } else {
-                    this.$router.push(this.path)
+                if (this.path) {
+                    const isFile = path => /\/files\w*/.test(path);
+                    const isExternal = path => /^https?:\/\//i.test(path);
+                    if (isExternal(this.path) || isFile(this.path)) {
+                        window.location = this.path;
+                        window.location = this.path;
+                    } else {
+                        this.$router.push(this.path)
+                    }
                 }
             },
             mouseDown() {

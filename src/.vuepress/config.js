@@ -21,8 +21,8 @@ module.exports = {
             serviceWorker: true,
             updatePopup: {
                 '/': {
-                    message: 'مطالب جدیدی در دسترس است!',
-                    buttonText: 'بروزرسانی'
+                    message: 'بروزرسانی جدیدی در دسترس است!',
+                    buttonText: 'حله'
                 },
             },
         }],
