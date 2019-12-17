@@ -27,7 +27,8 @@
         background-color: #fff;
         font-size: 20px;
         padding: 10px;
-        border: 5px solid #3eaf7c;
+        border: 15px solid transparent;
+        box-shadow: 0 0.5px 0 0 #fff inset, 0 1px 2px 0 #B3B3B3;
     }
 
     .sw-update-popup button {
