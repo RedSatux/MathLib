@@ -1,6 +1,7 @@
 <template @mouseup="mouseUp">
     <div :class="['block', 'block-' + this.theme]">
-        <p class="title">{{ this.title }}</p><slot></slot>
+        <p class="title">{{ this.title }}</p>
+        <slot></slot>
     </div>
 </template>
 
@@ -8,8 +9,7 @@
     export default {
         props: [
             'title', 'theme'
-        ],
-
+        ]
     }
 </script>
 

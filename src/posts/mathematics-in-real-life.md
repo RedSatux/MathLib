@@ -1,6 +1,6 @@
 ---
 title: ریاضیات در زندگی واقعی
-image: /images/mathematics-in-real-life.jpeg
+image: /images/mathematics-in-real-life.jpg
 publish: 2019-12-13
 type: post
 tags:

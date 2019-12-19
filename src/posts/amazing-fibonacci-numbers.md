@@ -1,6 +1,6 @@
 ---
 title: اعداد شگفت انگیز فیبوناچی
-image: /images/amazing-fibonacci-numbers.jpeg
+image: /images/amazing-fibonacci-numbers.jpg
 publish: 2019-12-13
 type: post
 tags:
@@ -18,7 +18,7 @@ meta:
 
 <!-- more -->
 
-<Block theme="warning" title="دنباله فیبوناچی">«دنباله ای است که در آن هرجمله با مجموع دو جمله ی پیشین خود برابری می کند.»</Block>
+<Block theme="tip" title="دنباله فیبوناچی">«دنباله ای است که در آن هرجمله با مجموع دو جمله ی پیشین خود برابری می کند.»</Block>
 
 #### سری فیبوناچی
 
