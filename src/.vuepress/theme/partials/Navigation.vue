@@ -11,7 +11,7 @@
                 <li v-for="(item, index) in nav" role="menuitem" :key="index">
                     <router-link :class="{ active: item.active }" :to="item.link">{{ item.text }}</router-link>
                 </li>
-                <li>
+                <li id="search-box">
                     <search-box></search-box>
                 </li>
             </ul>
@@ -165,6 +165,9 @@
             display: none;
         }
         .site-nav-right {
+            display: none;
+        }
+        #search-box {
             display: none;
         }
     }
