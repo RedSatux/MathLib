@@ -4,7 +4,7 @@
                 v-if="enabled"
                 class="sw-update-popup">
             {{ message }}<br>
-            <Button :text="buttonText" theme="success" @click="reload"></Button>
+            <Button :text="buttonText" theme="default" @click="reload"></Button>
         </div>
     </SWUpdatePopup>
 </template>
@@ -20,14 +20,15 @@
 
 <style lang="scss">
     .sw-update-popup {
+        right: 20px;
+        bottom: 20px;
+        z-index: 100;
+        padding: 10px;
         font-size: 20px;
-        right: 20px !important;
-        bottom: 20px !important;
-        z-index: 100 !important;
-        padding: 10px !important;
-        text-align: right !important;
-        background-color: #f5f5f5 !important;
-        border: 15px solid transparent !important;
-        box-shadow: 0 0.5px 0 0 #f4f4f4 inset, 0 1px 2px 0 #d2d2d2 !important;
+        position: fixed;
+        text-align: right;
+        background-color: #f5f5f5;
+        border: 15px solid transparent;
+        box-shadow: 0 0.5px 0 0 #f4f4f4 inset, 0 1px 2px 0 #d2d2d2;
     }
 </style>

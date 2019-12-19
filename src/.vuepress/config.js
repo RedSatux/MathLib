@@ -22,6 +22,7 @@ module.exports = {
             updatePopup: {
                 '/': {
                     message: 'بروزرسانی جدیدی در دسترس است!',
+                    popupComponent: 'UpdatePopup',
                     buttonText: 'حله'
                 },
             },
