@@ -49,7 +49,7 @@ module.exports = {
         searchMaxSuggestions: 5,
         searchHotKeys: ['s', '/'],
         searchNoResults: 'نتیجه ای یافت نشد...',
-        searchPlaceholder: 'جستجو در وبلاگ...',
+        searchPlaceholder: 'جستجو در نوشته ها...',
         social: {
             instagram: 'https://instagram.com/RedSatux',
             email: 'mailto:redsatux@gmail.com',
