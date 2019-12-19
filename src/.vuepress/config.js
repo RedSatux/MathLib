@@ -17,6 +17,18 @@ module.exports = {
     },
     plugins: [
         'latex',
+        ['seo', {
+            author: _ =>'SadeghRamezani',
+            title: $page => $page.title,
+            siteTitle: (_, $site) => $site.title,
+            tags: $page => $page.frontmatter.tags,
+            twitterCard: _ => 'summary_large_image',
+            description: $page => $page.frontmatter.description,
+            url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+            publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+            image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
+            type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+        }],
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: {
@@ -29,6 +41,7 @@ module.exports = {
         }],
     ],
     themeConfig: {
+        domain: 'https://math-lib.ir',
         cover: '/cover.jpg',
         logo: '/logo.png',
         nav: [{
